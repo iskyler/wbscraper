@@ -9,3 +9,8 @@ do
     str=${str%\\n*}
     echo "$str" >> $uri
 done
+
+sed -i 's/\\\"/"/g' $uri
+sed -i 's/\\\//\//g' $uri
+sed -i 's/\\t/ /g' $uri
+sed -i 's/\\n/ /g' $uri
